@@ -1,0 +1,35 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<OLLAMA_API_BASE>/chat/completions"
+    body:
+      encoding: UTF-8
+      string: '{"model":"gemma3","messages":[{"role":"user","content":"what''s 1 +
+        1?"}],"stream":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 11 Dec 2025 02:27:33 GMT
+      Content-Length:
+      - '320'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImNoYXRjbXBsLTM4MCIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3NjU0MjAwNTMsIm1vZGVsIjoiZ2VtbWEzIiwic3lzdGVtX2ZpbmdlcnByaW50IjoiZnBfb2xsYW1hIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiIxICsgMSA9IDIgXG5cblRoYXTigJlzIHRoZSBhbnN3ZXIhIPCfmIoifSwiZmluaXNoX3JlYXNvbiI6InN0b3AifV0sInVzYWdlIjp7InByb21wdF90b2tlbnMiOjE4LCJjb21wbGV0aW9uX3Rva2VucyI6MTcsInRvdGFsX3Rva2VucyI6MzV9fQo=
+  recorded_at: Thu, 11 Dec 2025 02:27:33 GMT
+recorded_with: VCR 6.3.1

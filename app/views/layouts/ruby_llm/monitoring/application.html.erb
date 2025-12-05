@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RubyLLM Monitoring - <%= content_for :title %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="turbo-cache-control" content="no-cache">
+
+  <%= yield :head %>
+
+  <%= stylesheet_link_tag "ruby_llm/monitoring/bulma.min" %>
+  <%= stylesheet_link_tag "ruby_llm/monitoring/application", media: "all" %>
+  <%= javascript_importmap_tags importmap: RubyLLM::Monitoring.importmap %>
+</head>
+<body>
+
+  <section class="section">
+    <div class="container">
+      <%= render "ruby_llm/monitoring/application/flashes" %>
+      <%= render "ruby_llm/monitoring/application/nav" %>
+      <%= render "ruby_llm/monitoring/application/tabs" %>
+      <%= yield %>
+    </div>
+  </section>
+
+</body>
+</html>

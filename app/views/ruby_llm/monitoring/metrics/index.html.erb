@@ -1,0 +1,14 @@
+<% content_for :title, "Metrics" %>
+
+<%= render "filters", clear_path: metrics_path %>
+
+<% @metrics.each do |metric| %>
+  <div
+    data-controller="chart"
+    data-title="<%= metric[:title] %>"
+    data-min="<%= @created_at_start.to_i.in_milliseconds %>"
+    data-formatter="<%= metric[:unit] %>"
+    data-series="<%= metric[:series].to_json %>"
+  >
+  </div>
+<% end %>
