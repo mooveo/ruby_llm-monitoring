@@ -19,6 +19,9 @@ export default class extends Controller {
           tools: {
             download: false
           }
+        },
+        events: {
+          rendered: () => this.syncAll()
         }
       },
       colors: ["#3b82f6", "#4ade80", "#facc15", "#dc2626", "#7c3aed"],
@@ -54,6 +57,12 @@ export default class extends Controller {
     })
 
     this.chart.render()
+  }
+
+  syncAll() {
+    if (typeof ApexCharts !== "undefined") {
+      ApexCharts.exec("metrics", "syncAll")
+    }
   }
 
   formatterFunction() {
