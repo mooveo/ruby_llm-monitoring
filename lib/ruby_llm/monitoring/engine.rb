@@ -31,11 +31,11 @@ module RubyLLM
         app.config.assets.paths << root.join("app/javascript")
 
         app.config.assets.precompile += %w[
-          ruby_llm/evals/application.css
-          ruby_llm/evals/bulma.min.css
-          ruby_llm/evals/application.js
-          ruby_llm/evals/controllers/application.js
-          ruby_llm/evals/controllers/index.js
+          ruby_llm/monitoring/application.css
+          ruby_llm/monitoring/bulma.min.css
+          ruby_llm/monitoring/application.js
+          ruby_llm/monitoring/controllers/application.js
+          ruby_llm/monitoring/controllers/index.js
         ]
       end
 
