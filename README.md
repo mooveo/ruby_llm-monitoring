@@ -38,6 +38,7 @@ end
 Now you should be able to browse to `/monitoring` and monitor your LLM usage.
 
 ![metrics](./assets/metrics.png)
+![alerts](./assets/alerts.png)
 
 ### Authentication and authorization
 
