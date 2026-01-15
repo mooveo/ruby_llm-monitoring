@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sinaptia/ruby_llm-instrumentation.git
-  revision: b253f669dae59a229b2ffe6b37fb58bebb894108
+  revision: 75c1564de0ae0878b213096ff948b2a0437ea6d1
   specs:
     ruby_llm-instrumentation (0.1.1)
       rails (>= 7.0.0)
