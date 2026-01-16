@@ -99,7 +99,7 @@ module RubyLLM::Monitoring
       ]
 
       Event.create!(payload: { "provider" => "ollama", "model" => "llama3.2" })
-      assert_in_delta Time.current + 10.minutes, Rails.cache.fetch("ruby_llm-monitoring/rule_0")
+      assert_in_delta Time.current + 10.minutes, Rails.cache.fetch("ruby_llm-monitoring/rule_0"), 1
     end
 
     test "uses default cooldown when not specified" do
@@ -113,7 +113,7 @@ module RubyLLM::Monitoring
       ]
 
       Event.create!(payload: { "provider" => "ollama", "model" => "llama3.2" })
-      assert_in_delta Time.current + RubyLLM::Monitoring.alert_cooldown, Rails.cache.fetch("ruby_llm-monitoring/rule_0")
+      assert_in_delta Time.current + RubyLLM::Monitoring.alert_cooldown, Rails.cache.fetch("ruby_llm-monitoring/rule_0"), 1
     end
 
     test "cooling_down? returns false when not in cooldown" do

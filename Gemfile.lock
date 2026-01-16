@@ -12,7 +12,7 @@ PATH
     ruby_llm-monitoring (0.1.0)
       groupdate
       importmap-rails
-      rails (>= 7.0.0)
+      rails (>= 7.2.0)
       ruby_llm
       ruby_llm-instrumentation (>= 0.1)
       stimulus-rails
