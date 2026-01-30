@@ -17,6 +17,8 @@ module RubyLLM::Monitoring
 
         input_cost + output_cost
       end
+    rescue RubyLLM::ModelNotFoundError
+      self.cost = 0.0
     end
   end
 end
